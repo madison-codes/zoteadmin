@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
 import './App.scss';
+
+import Nav from '../nav/Nav';
 
 import Users from '../users/Users';
 import Groups from '../groups/Groups';
-
 
 class App extends Component {
   render() {
@@ -16,15 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <nav>
-          <Link to="/">Dashboard</Link>
-          <Link to="/users">Users</Link>
-          <Link to="/groups">Groups</Link>
-
-          {/* <div>
-            <button onClick={() => browserHistory.push('/foo')}>Go to /foo</button>
-          </div> */}
-        </nav>
+        <Nav />
          {this.props.children}
       </div>
     );

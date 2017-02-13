@@ -26,7 +26,6 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <Route path="users" component={Users}/>
         <Route path="groups" component={Groups}/>
-
       </Route>
     </Router>
   </Provider>,
