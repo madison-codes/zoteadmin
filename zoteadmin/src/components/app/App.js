@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import './App.scss';
 
-import Foo from '../foo/Foo';
+import Users from '../users/Users';
+import Groups from '../groups/Groups';
+
 
 class App extends Component {
   render() {
@@ -15,11 +17,10 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <nav>
-            Links:
-            {' '}
-            <Link to="/">Home</Link>
-            {' '}
-            <Link to="/foo">Foo</Link>
+          <Link to="/">Dashboard</Link>
+          <Link to="/users">Users</Link>
+          <Link to="/groups">Groups</Link>
+
           {/* <div>
             <button onClick={() => browserHistory.push('/foo')}>Go to /foo</button>
           </div> */}

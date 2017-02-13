@@ -7,7 +7,9 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import reducers from './reducers/index';
 import App from './components/app/App';
-import Foo from './components/foo/Foo';
+import Users from './components/users/Users';
+import Groups from './components/groups/Groups';
+
 
 const store = createStore(
   combineReducers({
@@ -22,7 +24,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <Route path="foo" component={Foo}/>
+        <Route path="users" component={Users}/>
+        <Route path="groups" component={Groups}/>
+
       </Route>
     </Router>
   </Provider>,
