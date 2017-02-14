@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,sans-serif;
+}
+
+p {
+  margin: 5px;
+  color: $color-compliment-dark;
+}
+
+a {
+  color: $color-pop-one;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $color-highlight;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 100px;
+  background-color: $color-compliment;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
