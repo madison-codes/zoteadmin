@@ -37,6 +37,7 @@
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
+    "react-app-env": "^1.2.0",
     "react-dev-utils": "^0.5.0",
     "react-redux": "^5.0.2",
     "recursive-readdir": "2.1.0",
