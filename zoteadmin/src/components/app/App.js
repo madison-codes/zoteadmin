@@ -13,10 +13,17 @@ import { search } from '../../actions/search';
 
 function App({ search, children }) {
   return (
-    <main>
-      <Nav search={ search }/>
-      { children }
-    </main>
+    <div>
+      <main>
+        <Nav search={ search }/>
+        { children }
+      </main>
+      <footer>
+        <a href='mailto:support@zotebook.io'>support@zotebook.io</a>
+        <p>Crafted in Boulder, Colorado</p>
+        <p>© 2017 Blank Slate Systems</p>
+      </footer>
+    </div>
   )
 }
 
