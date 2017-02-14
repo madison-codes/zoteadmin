@@ -16,12 +16,6 @@ function Nav({ search, children }) {
         <Link to="/users">Users</Link>
         <Link to="/groups">Groups</Link>
       </div>
-      <input
-        type='text'
-        placeholder='search'
-        className='nav-search-input'
-        onKeyUp={(e) => search(e.target.value)}>
-      </input>
       <img className='search-icon' src='assets/images/search_icon.svg'/>
     </nav>
   );
