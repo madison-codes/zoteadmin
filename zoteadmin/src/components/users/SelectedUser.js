@@ -9,8 +9,7 @@ export default class SelectedUser extends Component{
   }
   render(){
     return(
-      <h1> WORKING
-      </h1>
+      <h1>WORKING</h1>
     )
   }
 }

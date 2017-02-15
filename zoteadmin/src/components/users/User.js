@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 
-function User({ id, name, email, stripe_id, sub_end }){
+function User({ user }){
   return(
     <div className='user'>
       <div className='user-info'>
-        <Link to="`${id}`" params={{selectedUser: name}}>{ name }</Link>
-        <p>{ email }</p>
+        <Link
+          to="`${id}`"> { user.username }
+        </Link>
+        <p>{ user.email }</p>
       </div>
-      <p>{ stripe_id }</p>
-      <p>{ sub_end }</p>
+      <p>{ user.stripe_id }</p>
+      <p>{ user.sub_end }</p>
     </div>
   )
 }
 
 export default User;
+
+
+
+
+
+
+
+{/* // onClick={(user) => selectedUser(user)}> */}

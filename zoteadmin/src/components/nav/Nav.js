@@ -7,7 +7,7 @@ import Groups from '../groups/Groups';
 
 import { search } from '../../actions/search';
 
-function Nav({ search, children }) {
+function Nav ({ search }) {
   return (
     <nav>
       <div className='nav-link-container'>
@@ -16,6 +16,12 @@ function Nav({ search, children }) {
         <Link to="/users">Users</Link>
         <Link to="/groups">Groups</Link>
       </div>
+      <input
+        type='text'
+        placeholder='search'
+        className='nav-search-input'
+        onKeyUp={(e) => search(e.target.value)}>
+      </input>
       <img className='search-icon' src='assets/images/search_icon.svg'/>
     </nav>
   );

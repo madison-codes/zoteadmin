@@ -15,7 +15,8 @@ function App({ search, children }) {
   return (
     <div>
       <main>
-        <Nav search={ search }/>
+        <Nav />
+        <Users search={ search }/> 
         { children }
       </main>
       <footer>
