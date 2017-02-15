@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 import mock from '../../mock/users';
 
-class Users extends Component {
-  render() {
-    return (
-      <div className='single-user'>
-      <h1>Users</h1>
+import { connect } from 'react-redux';
 
-        {mock.users.map(user =>
-          <div className='user'>
-            <div className='user-info'>
-              <p>{user.username}</p>
-              <p>{user.email}</p>
-            </div>
-            <p>{user.stripe_id}</p>
-            <p>{user.sub_end}</p>
-          </div>
-        )}
-      </div>
-    );
-  }
+import { search } from '../../actions/search';
+import User from './User';
+
+function Users({ search }) {
+  return (
+    <div className='all-users'>
+      <input
+        type='text'
+        placeholder='search'
+        className='nav-search-input'
+        onKeyUp={(e) => search(e.target.value)}>
+      </input>
+      {mock.users.map(user => <User
+        user={user}
+        />
+      )}
+    </div>
+  );
 }
 
-export default Users;
+
+export default connect(
+  state => ({ searchTerm: state.searchTerm }),
+  { search }
+)(Users)

@@ -7,7 +7,7 @@ import Groups from '../groups/Groups';
 
 import { search } from '../../actions/search';
 
-function Nav({ search, children }) {
+function Nav ({ search }) {
   return (
     <nav>
       <div className='nav-link-container'>

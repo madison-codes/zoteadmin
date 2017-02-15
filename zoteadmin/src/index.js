@@ -14,8 +14,10 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import reducers from './reducers/index';
 import App from './components/app/App';
 import Users from './components/users/Users';
-import Groups from './components/groups/Groups';
+import User from './components/users/User';
+import SelectedUser from './components/users/SelectedUser';
 
+import Groups from './components/groups/Groups';
 
 const reducer = combineReducers({
   ...reducers,
@@ -41,6 +43,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <Route path="users" component={Users}/>
         <Route path="groups" component={Groups}/>
+        {/* <Route path="/:user_id" component={SelectedUser}/> */}
       </Route>
     </Router>
   </Provider>,
