@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function SelectedUser({}){
-  return(
-    <h1>
-      ITS FUCKING WORKING!
-    </h1>
-  )
+export default class SelectedUser extends Component{
+  constructor(){
+    super();
+    this.state= {
+
+    };
+  }
+  render(){
+    return(
+      <h1> WORKING
+      </h1>
+    )
+  }
 }
-
-export default SelectedUser;

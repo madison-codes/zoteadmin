@@ -17,9 +17,7 @@ import Users from './components/users/Users';
 import User from './components/users/User';
 import SelectedUser from './components/users/SelectedUser';
 
-
 import Groups from './components/groups/Groups';
-
 
 const reducer = combineReducers({
   ...reducers,
