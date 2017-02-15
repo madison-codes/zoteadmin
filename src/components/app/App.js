@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect, getState } from 'react-redux'
 import '../../styles/index.scss';
+
 
 import Nav from '../nav/Nav';
 
@@ -16,7 +17,7 @@ function App({ search, children }) {
     <div>
       <main>
         <Nav />
-        <Users search={ search }/> 
+        <Users search={ search }/>
         { children }
       </main>
       <footer>

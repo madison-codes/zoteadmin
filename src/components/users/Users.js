@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { search } from '../../actions/search';
 import User from './User';
 
-function Users({ search }) {
+const Users = ({ search }) => {
   return (
     <div className='all-users'>
       <input
@@ -23,8 +23,4 @@ function Users({ search }) {
   );
 }
 
-
-export default connect(
-  state => ({ searchTerm: state.searchTerm }),
-  { search }
-)(Users)
+export default Users;
