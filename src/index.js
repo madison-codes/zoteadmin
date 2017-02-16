@@ -1,15 +1,13 @@
-import { createDevTools } from 'redux-devtools'
-import LogMonitor from 'redux-devtools-log-monitor'
-import DockMonitor from 'redux-devtools-dock-monitor'
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createStore, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+
+import createLogger from 'redux-logger';
 
 import reducers from './reducers/index';
 import App from './components/app/App';
@@ -19,17 +17,15 @@ import SelectedUser from './components/users/SelectedUser';
 
 import Groups from './components/groups/Groups';
 
+const middleWare = [];
+
+
 const reducer = combineReducers({
   ...reducers,
   routing: routerReducer
 })
 
-const DevTools = createDevTools(
-  <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
-    <LogMonitor theme="tomorrow" preserveScrollTop={false} />
-  </DockMonitor>
-)
-
+const logger = createLogger();
 const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
