@@ -4,6 +4,8 @@ import { browserHistory } from 'react-router';
 import Explore from '../components/Explore';
 import { resetErrorMessage } from '../actions';
 
+import Nav from '../components/nav/Nav';
+
 class App extends Component {
   static propTypes = {
     // Injected by React Redux
@@ -45,6 +47,7 @@ class App extends Component {
     const { children, inputValue } = this.props
     return (
       <div>
+        <Nav />
         <Explore value={inputValue}
                  onChange={this.handleChange} />
         <hr />
