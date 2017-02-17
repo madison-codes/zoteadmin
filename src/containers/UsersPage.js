@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 // import { loadUser } from '../actions';
-import User from '../components/User';
+import UserList from '../components/users/UsersMock';
 // import Repo from '../components/Repo';
 // import List from '../components/List';
 // import zip from 'lodash/zip';
@@ -23,7 +23,10 @@ class UsersPage extends Component {
 
   render() {
     return(
-      <h1>USERS</h1>
+      <div>
+        <h1>USERS PAGE</h1>
+        <UserList />
+      </div>
     )
   }
 }

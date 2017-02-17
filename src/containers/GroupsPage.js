@@ -23,7 +23,7 @@ class UsersPage extends Component {
 
   render() {
     return(
-      <h1>GROUPS</h1>
+      <h1>GROUPS PAGE</h1>
     )
   }
 }
