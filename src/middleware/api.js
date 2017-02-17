@@ -38,22 +38,27 @@ const callApi = (endpoint, schema) => {
     );
 };
 
-const userSchema = new schema.Entity('users', {}, {
-  idAttribute: user => user.login.toLowerCase()
+const adminSchema = new schema.Entity('admin', {}, {
+  idAttribute: admin => admin.login.toLowerCase()
 });
 
-const repoSchema = new schema.Entity('repos', {
-  owner: userSchema
+const usersSchema = new schema.Entity('users', {
+  owner: adminSchema
 }, {
-  idAttribute: repo => repo.fullName.toLowerCase()
+  idAttribute: user => user.fullName.toLowerCase()
 });
 
-// Schemas for Github API responses.
+const groupsSchema = new schema.Entity('groups', {
+  owner: adminSchema
+}, {
+  idAttribute: groups => groups.fullName.toLowerCase()
+});
+
+// Schemas for zotebook responses.
 export const Schemas = {
-  USER: userSchema,
-  USER_ARRAY: [userSchema],
-  REPO: repoSchema,
-  REPO_ARRAY: [repoSchema]
+  // USER: userSchema,
+  USER_ARRAY: [usersSchema],
+  GROUP_ARRAY: [groupsSchema]
 };
 
 // Action key that carries API call info interpreted by this Redux middleware.

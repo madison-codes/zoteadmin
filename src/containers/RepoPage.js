@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { loadRepo, loadStargazers } from '../actions'
-import Repo from '../components/Repo'
-import User from '../components/User'
-import List from '../components/List'
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { loadRepo, loadStargazers } from '../actions';
+import Repo from '../components/Repo';
+import User from '../components/User';
+import List from '../components/List';
 
 const loadData = props => {
   const { fullName } = props
@@ -11,7 +11,7 @@ const loadData = props => {
   props.loadStargazers(fullName)
 }
 
-class RepoPage extends Component {
+class GroupsPage extends Component {
   static propTypes = {
     repo: PropTypes.object,
     fullName: PropTypes.string.isRequired,
@@ -91,4 +91,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(mapStateToProps, {
   loadRepo,
   loadStargazers
-})(RepoPage)
+})(GroupsPage)

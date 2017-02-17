@@ -1,5 +1,6 @@
 const users = {
-  "status":"ok","users":[
+  "status":"ok",
+  "users":[
     {
       "id":1477,
       "email":"fabrication@lauriston.vic.edu.au",

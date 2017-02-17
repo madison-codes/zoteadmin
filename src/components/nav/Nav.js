@@ -11,18 +11,18 @@ function Nav ({ search }) {
   return (
     <nav>
       <div className='nav-link-container'>
-        <img src="assets/images/zb-full-logo.png" alt="Zotebook" width="108" height="34"/>
+        {/* <img src="assets/images/zb-full-logo.png" alt="Zotebook" width="108" height="34"/> */}
         <Link to="/">Home</Link>
         <Link to="/users">Users</Link>
         <Link to="/groups">Groups</Link>
       </div>
-      <input
+      {/* <input
         type='text'
         placeholder='search'
         className='nav-search-input'
         onKeyUp={(e) => search(e.target.value)}>
       </input>
-      <img className='search-icon' src='assets/images/search_icon.svg'/>
+      <img className='search-icon' src='assets/images/search_icon.svg'/> */}
     </nav>
   );
 }

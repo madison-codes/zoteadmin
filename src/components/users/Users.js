@@ -9,12 +9,12 @@ import User from './User';
 const Users = ({ search }) => {
   return (
     <div className='all-users'>
-      <input
+      {/* <input
         type='text'
         placeholder='search'
         className='nav-search-input'
         onKeyUp={(e) => search(e.target.value)}>
-      </input>
+      </input> */}
       {mock.users.map(user => <User
         user={user}
         />
