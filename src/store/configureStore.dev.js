@@ -10,13 +10,14 @@ import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
 const configureStore = preloadedState => {
+  compose(
+    applyMiddleware(thunk, api, createLogger()),
+    DevTools.instrument()
+  );
   const store = createStore(
     rootReducer,
     preloadedState,
-    compose(
-      applyMiddleware(thunk, api, createLogger()),
-      DevTools.instrument()
-    )
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   );
 
   if (module.hot) {
