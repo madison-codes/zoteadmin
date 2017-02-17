@@ -2,7 +2,7 @@
 // compose - allows you to add multiple enhancers in a row
 // thunk - middleware: allows you to write action creators that return a function instead of an action
 
-import { createStore, applyMiddleware, compose } from 'react';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import api from '../middleware/api';
@@ -26,7 +26,6 @@ const configureStore = preloadedState => {
       store.replaceReducer(nextRootReducer);
     });
   }
-
   return store;
 };
 
