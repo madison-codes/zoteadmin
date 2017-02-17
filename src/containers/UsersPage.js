@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 // import { loadUser } from '../actions';
-import UserList from '../components/users/UsersMock';
+import UserList from '../components/users/Users';
 // import Repo from '../components/Repo';
 // import List from '../components/List';
 // import zip from 'lodash/zip';
