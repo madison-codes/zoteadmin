@@ -1,41 +1,23 @@
-import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-// import { loadUser } from '../actions';
-import UserList from '../components/users/Users';
-// import Repo from '../components/Repo';
-// import List from '../components/List';
-// import zip from 'lodash/zip';
+import Users from '../components/users/Users';
+import { searchTerm } from '../actions/index';
 
-// const loadData = ({ login, loadUser }) => {
-//   loadUser(login, [ 'name' ]);
-// };
 
-class UsersPage extends Component {
-  static propTypes = {
-    // login: PropTypes.string.isRequired,
-    // user: PropTypes.object,
-    // starredPagination: PropTypes.object,
-    // starredRepos: PropTypes.array.isRequired,
-    // starredRepoOwners: PropTypes.array.isRequired,
-    // loadUser: PropTypes.func.isRequired,
-    // loadStarred: PropTypes.func.isRequired
-  }
 
-  render() {
-    return(
-      <div>
-        <h1>USERS PAGE</h1>
-        <UserList />
-      </div>
-    )
-  }
-}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    searchTerm: (input) => {
+      dispatch(searchTerm({ 'searchTerm': input }));
+    }
+  };
+};
 
-const mapStateToProps = (state, ownProps) => {
-  const { } = state;
-  return { }
-}
+const mapStateToProps = (state) => {
+  return {
+    searchTerm: state.searchTerm,
+  };
+};
 
-export default connect(mapStateToProps, {
-  // loadUser
-})(UsersPage)
+let UsersPage = connect(mapStateToProps, mapDispatchToProps)(Users);
+
+export default UsersPage;
