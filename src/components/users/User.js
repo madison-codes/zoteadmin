@@ -10,7 +10,7 @@ function User({ user }){
         </Link>
         <p>{ user.email }</p>
       </div>
-      <p>{ user.stripe_id }</p>
+      <p>{ user.id }</p>
       <p>{ user.sub_end }</p>
     </div>
   )

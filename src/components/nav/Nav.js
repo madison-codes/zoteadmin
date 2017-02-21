@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link, browserHistory } from 'react-router';
+import { Link } from 'react-router';
 
-import Users from '../users/Users';
-import Groups from '../groups/Groups';
-
-const Nav = ({ }) => {
+const Nav = () => {
   return (
     <nav>
       <div className='nav-link-container'>
@@ -17,7 +14,4 @@ const Nav = ({ }) => {
   );
 }
 
-
-export default connect(
-
-)(Nav)
+export default connect()(Nav)
