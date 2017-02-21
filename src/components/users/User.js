@@ -1,27 +1,20 @@
-import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
+import React from 'react';
+import { Link } from 'react-router';
 
-function User({ user }){
+const User = ({ user, formattedDate }) => {
   return(
     <div className='user'>
       <div className='user-info'>
         <Link
-          to="`${id}`"> { user.username }
+          to="`${user.id}`"> { user.username }
         </Link>
         <p>{ user.email }</p>
       </div>
-      <p>{ user.id }</p>
       <p>{ user.sub_end }</p>
+
+      <p>{ formattedDate }</p>
     </div>
   )
 }
 
 export default User;
-
-
-
-
-
-
-
-{/* // onClick={(user) => selectedUser(user)}> */}
