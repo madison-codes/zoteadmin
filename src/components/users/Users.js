@@ -15,7 +15,6 @@ const Users = ({ searchTerm }) => {
         className='nav-search-input'
         onKeyUp={(e) => searchTerm(e.target.value)}>
       </input>
-
       {mock.users.map(user => <User
         user={user}
         />
