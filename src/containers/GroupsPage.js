@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Groups from '../components/groups/Groups';
-import Users from '../components/users/Users';
+// import Users from '../components/users/Users';
 
 const mapStateToProps = (state) => {
   return {

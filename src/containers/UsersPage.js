@@ -2,8 +2,6 @@ import { connect } from 'react-redux';
 import Users from '../components/users/Users';
 import { searchTerm } from '../actions/index';
 
-
-
 const mapDispatchToProps = (dispatch) => {
   return {
     searchTerm: (input) => {
