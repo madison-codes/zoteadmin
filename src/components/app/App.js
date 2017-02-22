@@ -7,7 +7,6 @@ import { browserHistory } from 'react-router';
 import Nav from '../nav/Nav';
 
 const App = ({ searchTerm, children}) => {
-  // const { children } = this.props;
     return (
       <div>
         <Nav />
@@ -22,5 +21,4 @@ const App = ({ searchTerm, children}) => {
     )
   }
 
-//
 export default App;
