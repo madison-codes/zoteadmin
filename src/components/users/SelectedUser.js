@@ -1,15 +1,7 @@
-// import React, { Component } from 'react';
-//
-// export default class SelectedUser extends Component{
-//   constructor(){
-//     super();
-//     this.state= {
-//
-//     };
-//   }
-//   render(){
-//     return(
-//       <h1>WORKING</h1>
-//     )
-//   }
-// }
+import React, { Component } from 'react';
+
+const SelectedUser = () => {
+  return(
+    <h1>WORKING</h1>
+  )
+}

@@ -4,3 +4,10 @@ export const searchTerm = (term) => {
     term
   };
 };
+
+export const filterType = (filterType) => {
+  return {
+    type: 'FILTER_TYPE',
+    filterType
+   };
+};

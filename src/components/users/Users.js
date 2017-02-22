@@ -1,29 +1,30 @@
 import React from 'react';
+
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
 import mock from '../../mock/users';
 import User from './User';
+import UserFilter from './UserFilters';
 
-// function findLowest(a, b) {
-//   return a - b;
-// }
+import { unixTimestamp } from '../../helpers/formatDateTime';
 
-const Users = ({ searchTerm }) => {
-  return (
-    <div className='all-users'>
-      <input
-        type='text'
-        placeholder='search'
-        className='nav-search-input'
-        onKeyUp={(e) => searchTerm(e.target.value)}>
-      </input>
-
-      {mock.users.map(user => <User
-        user={user}
-        />
-      )
-      // mock.users.sort(user => findLowest(user))
-      }
-    </div>
-  );
+class Users extends React.Component {
+  render(){
+  console.log(this.props);
+    return (
+      <div className='all-users'>
+        <UserFilter filter={ this.props.filterType } />
+        {
+          mock.users.map(user => <User
+          user={user}
+          formattedDate={ unixTimestamp(user.sub_end) }
+          />
+        )
+        }
+      </div>
+    );
+  }
 }
 
 export default Users;
