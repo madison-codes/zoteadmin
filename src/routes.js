@@ -6,8 +6,6 @@ import GroupsPage from './containers/GroupsPage';
 
 export default
   <Route path="/" component={App}>
-      <Route path="/users"
-      component={UsersPage} />
-      <Route path="groups"
-             component={GroupsPage} />
+      <Route path="/users" component={UsersPage} />
+      <Route path="groups" component={GroupsPage} />
   </Route>
