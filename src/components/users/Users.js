@@ -8,20 +8,28 @@ import User from './User';
 import UserFilter from './UserFilters';
 
 import { unixTimestamp } from '../../helpers/formatDateTime';
+import { dynamicSort } from '../../helpers/dynamicSort';
+
 
 class Users extends React.Component {
+  constructor(props, context){
+    super(props, context);
+  }
+
   renderUsers() {
+    console.log(this.props.state.filter.filter.filter);
     /* chain filter and sort to get users */
     return mock.users.filter(user => true)
-      .sort(/* write sorting logic here */)
+      // .filter()
+      .sort(dynamicSort(this.props.state.filter.filter.filter))
       .map((user, index) => <User
-      key={index}
-      user={user}
-      formattedDate={ unixTimestamp(user.sub_end) }
+        key={index}
+        user={user}
+        formattedDate={ dynamicSort(user.sub_end) }
     />)
   }
+
   render(){
-  console.log(this.props.filterType);
     return (
       <div className='all-users'>
         <UserFilter filter={ this.props.filterType } />

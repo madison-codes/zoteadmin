@@ -18,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
+    state: state,
     searchTerm: state.searchTerm,
     filterType: state.filterType
   };

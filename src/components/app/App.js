@@ -6,27 +6,12 @@ import { browserHistory } from 'react-router';
 
 import Nav from '../nav/Nav';
 
-// const App = ({ searchTerm, children}) => {
-//     return (
-//       <div>
-//         <Nav />
-//         <input
-//           type='text'
-//           placeholder='search'
-//           className='nav-search-input'
-//           value={this.state.searchTerm}
-//           onKeyDown={(e) => searchTerm(e.target.value)} />
-//         { children }
-//       </div>
-//     )
-//   }
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       term: ''
-    }
+    };
   }
 
   handleChange = e => {
