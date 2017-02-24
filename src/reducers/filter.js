@@ -1,5 +1,5 @@
 const defaultState = {
-  filter:''
+  filter: { filter: 'created'}
 };
 
 const filterType = (state = defaultState, action) => {

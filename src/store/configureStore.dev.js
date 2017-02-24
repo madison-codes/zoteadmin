@@ -1,7 +1,3 @@
-// middleware - provides a third-party extension point between dispatching an action, and the moment it reaches the reducer
-// compose - allows you to add multiple enhancers in a row
-// thunk - middleware: allows you to write action creators that return a function instead of an action
-
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
