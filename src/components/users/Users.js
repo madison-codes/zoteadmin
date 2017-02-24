@@ -17,11 +17,12 @@ class Users extends React.Component {
   }
 
   renderUsers() {
-    console.log(this.props.state.filter.filter.filter);
+    console.log(this.props.state.search.searchTerm.searchTerm);
     /* chain filter and sort to get users */
     return mock.users.filter(user => true)
-      // .filter()
+
       .sort(dynamicSort(this.props.state.filter.filter.filter))
+      // .match(this.props.state.search.searchTerm.searchTerm)
       .map((user, index) => <User
         key={index}
         user={user}
