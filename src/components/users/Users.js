@@ -10,18 +10,23 @@ import UserFilter from './UserFilters';
 import { unixTimestamp } from '../../helpers/formatDateTime';
 
 class Users extends React.Component {
+  renderUsers() {
+    /* chain filter and sort to get users */
+    return mock.users.filter(user => true)
+      .sort(/* write sorting logic here */)
+      .map((user, index) => <User
+      key={index}
+      user={user}
+      formattedDate={ unixTimestamp(user.sub_end) }
+    />)
+  }
   render(){
-  console.log(this.props);
+  console.log(this.props.filterType);
     return (
       <div className='all-users'>
         <UserFilter filter={ this.props.filterType } />
         {
-          mock.users.map((user, index) => <User
-            key={index}
-            user={user}
-            formattedDate={ unixTimestamp(user.sub_end) }
-          />
-          )
+          this.renderUsers()
         }
       </div>
     );
