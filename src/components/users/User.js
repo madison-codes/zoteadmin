@@ -6,7 +6,7 @@ const User = ({ user, formattedDate }) => {
     <div className='user'>
       <div className='user-info'>
         <Link
-          to="`${user.id}`"> { user.username }
+          to={user.id.toString()}> { user.username }
         </Link>
         <p>{ user.email }</p>
       </div>

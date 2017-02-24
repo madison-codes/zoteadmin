@@ -6,8 +6,10 @@ class Groups extends Component {
     return (
       <div>
         <h1>Groups</h1>
-        {mock.groups.map(group =>
-          <div className='group'>
+        {mock.groups.map((group, index) =>
+          <div className='group'
+            key={index}
+          >
             <p>{group.name}</p>
             <p>{group.groupusers}</p>
             <p>{group.sub_end}</p>

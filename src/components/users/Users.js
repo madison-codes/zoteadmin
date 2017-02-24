@@ -16,11 +16,12 @@ class Users extends React.Component {
       <div className='all-users'>
         <UserFilter filter={ this.props.filterType } />
         {
-          mock.users.map(user => <User
-          user={user}
-          formattedDate={ unixTimestamp(user.sub_end) }
+          mock.users.map((user, index) => <User
+            key={index}
+            user={user}
+            formattedDate={ unixTimestamp(user.sub_end) }
           />
-        )
+          )
         }
       </div>
     );

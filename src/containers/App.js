@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AppComponent from '../components/app/App';
-import { searchTerm } from '../actions/index';
+import { searchTerm } from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
