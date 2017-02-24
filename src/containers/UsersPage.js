@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Users from '../components/users/Users';
 
-import { searchTerm } from '../actions/index';
-import { filterType } from '../actions/index';
+import { searchTerm } from '../actions';
+import { filterType } from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
