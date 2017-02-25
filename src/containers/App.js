@@ -5,14 +5,14 @@ import { searchTerm } from '../actions';
 const mapDispatchToProps = (dispatch) => {
   return {
     searchTerm: (input) => {
-      dispatch(searchTerm({ 'searchTerm': input }));
+      dispatch(searchTerm(input));
     }
   };
 };
 
 const mapStateToProps = (state) => {
   return {
-    searchTerm: state.searchTerm,
+    state
   };
 };
 

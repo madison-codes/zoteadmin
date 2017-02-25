@@ -1,15 +1,10 @@
 import React from 'react';
-import mock from '../../mock/users';
-import User from './User';
-import { unixTimestamp } from '../../helpers/formatDateTime';
 
 class UserFilters extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
   }
+
   render(){
     return (
       <div className='all-users'>
