@@ -17,9 +17,9 @@ class Users extends React.Component {
   }
 
   handleSearchFilter() {
-    const search = this.props.state.search.searchTerm.searchTerm;
-    const filter = this.props.state.filter.filter.filter;
-    console.log(this.props.state.search.searchTerm.searchTerm);
+    const search = this.props.state.search;
+    const filter = this.props.state.filter;
+    console.log(this.props.state.filter);
     /* chain filter and sort to get users */
     const activeUsers = mock.users
       .filter((user) => user.username.includes(search))
@@ -40,9 +40,7 @@ class Users extends React.Component {
     return (
       <div className='all-users'>
         <UserFilter filter={ this.props.filterType } />
-        {
-          this.handleSearchFilter()
-        }
+        { this.handleSearchFilter() }
       </div>
     );
   }

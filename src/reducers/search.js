@@ -1,16 +1,12 @@
-const defaultState = {
-  searchTerm: { searchTerm: ''}
-};
+const defaultState = '';
 
-const searchTerm = (state = defaultState, action) => {
+const search = (state = defaultState, action) => {
   switch (action.type) {
     case 'SEARCH_TERM':
-      return Object.assign({}, state, {
-        searchTerm: action.term
-      });
+      return action.term;
     default:
       return state;
   }
 };
 
-export default searchTerm;
+export default search;

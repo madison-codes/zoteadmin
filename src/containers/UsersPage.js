@@ -8,19 +8,18 @@ import { filterType } from '../actions';
 const mapDispatchToProps = (dispatch) => {
   return {
     searchTerm: (input) => {
-      dispatch(searchTerm({ 'searchTerm': input }));
+      dispatch(searchTerm(input));
     },
     filterType: (term) => {
-      dispatch(filterType({ 'filter': term }));
+      dispatch(filterType(term));
     }
   };
 };
 
 const mapStateToProps = (state) => {
+  // const { search } = state;
   return {
-    state: state,
-    searchTerm: state.searchTerm,
-    filterType: state.filterType
+    state
   };
 };
 
