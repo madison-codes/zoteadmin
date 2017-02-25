@@ -1,5 +1,5 @@
 const defaultState = {
-  searchTerm:''
+  searchTerm: { searchTerm: ''}
 };
 
 const searchTerm = (state = defaultState, action) => {

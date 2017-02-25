@@ -16,18 +16,24 @@ class Users extends React.Component {
     super(props, context);
   }
 
-  renderUsers() {
+  handleSearchFilter() {
+    const search = this.props.state.search.searchTerm.searchTerm;
+    const filter = this.props.state.filter.filter.filter;
     console.log(this.props.state.search.searchTerm.searchTerm);
     /* chain filter and sort to get users */
-    return mock.users.filter(user => true)
+    const activeUsers = mock.users
+      .filter((user) => user.username.includes(search))
+      .sort(dynamicSort(filter));
+    return this.renderUsers(activeUsers);
+  }
 
-      .sort(dynamicSort(this.props.state.filter.filter.filter))
-      // .match(this.props.state.search.searchTerm.searchTerm)
-      .map((user, index) => <User
+  renderUsers(users){
+    return users.map((user, index) => <User
         key={index}
         user={user}
         formattedDate={ dynamicSort(user.sub_end) }
     />)
+
   }
 
   render(){
@@ -35,7 +41,7 @@ class Users extends React.Component {
       <div className='all-users'>
         <UserFilter filter={ this.props.filterType } />
         {
-          this.renderUsers()
+          this.handleSearchFilter()
         }
       </div>
     );
