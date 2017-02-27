@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import UsersPage from '../../containers/UsersPage';
+import { Link } from 'react-router';
 
 class SelectedUser extends Component {
   render(){
-    console.log(this.props.state);
     return(
-      <h1>Working</h1>
+      <div>
+        <button>
+          <Link
+            to="/users"> Exit
+          </Link>
+        </button>
+
+        <h1>Working</h1>
+      </div>
     )
   }
 }
