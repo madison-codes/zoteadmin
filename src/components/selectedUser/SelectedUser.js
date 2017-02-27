@@ -8,6 +8,7 @@ class SelectedUser extends Component {
       <div>
         <button>
           <Link
+            onClick={() => this.props.selectUser({})}
             to="/users"> Exit
           </Link>
         </button>

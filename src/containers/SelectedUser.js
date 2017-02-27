@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SelectedUser from '../components/selectedUser/SelectedUser';
 
+import { selectUser } from '../actions';
+
 const mapDispatchToProps = (dispatch) => {
-  // return {
-  //   searchTerm: (input) => {
-  //     dispatch(searchTerm(input));
-  //   },
-  //   filterType: (term) => {
-  //     dispatch(filterType(term));
-  //   }
-  // };
+  return {
+    selectUser: (user) => {
+      dispatch(selectUser(user));
+    }
+  };
 };
 
 const mapStateToProps = (state) => {
