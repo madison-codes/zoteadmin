@@ -1,5 +1,7 @@
 import moment from 'moment';
 
-export const unixTimestamp = (dateTime) => {
-  return moment(dateTime, 'YYYY-MM-DD').unix();
+const formatDateTime = (dateTime) => {
+  return moment(dateTime).format('MMMM Do YYYY, h:mm:ss a');
 };
+
+export default formatDateTime;

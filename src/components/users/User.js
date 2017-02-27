@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { Link } from 'react-router';
+import unixTimestamp from '../../helpers/formatDateTime';
 
 class User extends Component {
 
@@ -18,9 +19,11 @@ class User extends Component {
           <p>{ this.props.user.email }</p>
 
         </div>
-        <p>{ this.props.user.sub_end }</p>
+        <p>{ this.props.subEndFormatted }</p>
+        <p>{ this.props.createdFormatted }</p>
 
-        <p>{ this.props.formattedDate }</p>
+
+        {/* <p>{ this.props.formattedDate }</p> */}
       </div>
     )
   }
