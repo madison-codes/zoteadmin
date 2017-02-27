@@ -11,3 +11,10 @@ export const filterType = (filterType) => {
     filterType
    };
 };
+
+export const selectUser = (user) => {
+  return {
+    type: 'SELECT_USER',
+    user
+   };
+};

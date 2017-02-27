@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { Component} from 'react';
 import { Link } from 'react-router';
 
-const User = ({ user, formattedDate }) => {
-  return(
-    <div className='user'>
-      <div className='user-info'>
-        <Link
-          to={user.id.toString()}> { user.username }
-        </Link>
-        <p>{ user.email }</p>
-      </div>
-      <p>{ user.sub_end }</p>
+class User extends Component {
 
-      <p>{ formattedDate }</p>
-    </div>
-  )
+  handleSelectedUser(user){
+    console.log(user);
+  }
+
+  render(){
+    return(
+      <div className='user'>
+        <div className='user-info'>
+          <Link
+            onClick={(e) => this.props.selectUser(this.props.user) }
+            to={this.props.user.id.toString()}> { this.props.user.username }
+          </Link>
+          <p>{ this.props.user.email }</p>
+
+        </div>
+        <p>{ this.props.user.sub_end }</p>
+
+        <p>{ this.props.formattedDate }</p>
+      </div>
+    )
+  }
 }
 
 export default User;

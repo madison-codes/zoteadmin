@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class UserFilters extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+class UserFilters extends Component {
 
   render(){
     return (

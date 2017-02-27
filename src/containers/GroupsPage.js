@@ -8,6 +8,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-let UsersPage = connect(mapStateToProps, null)(Groups);
+let GroupsPage = connect(mapStateToProps, null)(Groups);
 
-export default UsersPage;
+export default GroupsPage;
