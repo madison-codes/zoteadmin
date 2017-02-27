@@ -1,13 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import Nav from '../nav/Nav';
 
 // import '../styles/index.scss';
 
-import Nav from '../nav/Nav';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+class App extends Component {
 
   render() {
     return (

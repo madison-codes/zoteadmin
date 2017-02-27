@@ -4,6 +4,7 @@ import Users from '../components/users/Users';
 
 import { searchTerm } from '../actions';
 import { filterType } from '../actions';
+import { selectUser } from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -12,12 +13,14 @@ const mapDispatchToProps = (dispatch) => {
     },
     filterType: (term) => {
       dispatch(filterType(term));
+    },
+    selectUser: (user) => {
+      dispatch(selectUser(user));
     }
   };
 };
 
 const mapStateToProps = (state) => {
-  // const { search } = state;
   return {
     state
   };

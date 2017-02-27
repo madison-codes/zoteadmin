@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class UserFilters extends React.Component {
+class UserFilters extends Component {
   constructor(props) {
     super(props);
   }

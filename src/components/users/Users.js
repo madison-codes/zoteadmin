@@ -1,25 +1,17 @@
 import React from 'react';
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
 import mock from '../../mock/users';
 import User from './User';
 import UserFilter from './UserFilters';
 
-import { unixTimestamp } from '../../helpers/formatDateTime';
 import { dynamicSort } from '../../helpers/dynamicSort';
 
 
 class Users extends React.Component {
-  constructor(props, context){
-    super(props, context);
-  }
 
   handleSearchFilter() {
     const search = this.props.state.search;
     const filter = this.props.state.filter;
-    console.log(this.props.state.filter);
     /* chain filter and sort to get users */
     const activeUsers = mock.users
       .filter((user) => user.username.includes(search))
@@ -32,6 +24,7 @@ class Users extends React.Component {
         key={index}
         user={user}
         formattedDate={ dynamicSort(user.sub_end) }
+        selectUser={ this.props.selectUser }
     />)
 
   }
