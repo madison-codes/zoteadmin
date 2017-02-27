@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UsersPage from '../../containers/UsersPage';
 import { Link } from 'react-router';
 
 class SelectedUser extends Component {
