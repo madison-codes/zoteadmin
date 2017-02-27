@@ -5,7 +5,7 @@ import User from './User';
 import UserFilter from './UserFilters';
 
 import { dynamicSort } from '../../helpers/dynamicSort';
-
+import formatDateTime from '../../helpers/formatDateTime';
 
 class Users extends React.Component {
 
@@ -23,7 +23,9 @@ class Users extends React.Component {
     return users.map((user, index) => <User
         key={index}
         user={user}
-        formattedDate={ dynamicSort(user.sub_end) }
+        subEndFormatted={ formatDateTime(user.sub_end) }
+        createdFormatted={ formatDateTime(user.created) }
+
         selectUser={ this.props.selectUser }
     />)
 
